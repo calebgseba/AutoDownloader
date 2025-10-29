@@ -4,6 +4,7 @@ import pandas as pd
 import keyboard
 
 df = pd.read_excel("PureData.xlsx")
+#The value of the count will be row that is downloaded +3. For example, 1098 will download the file in the 1101st excel row.
 count = 1098
 loop_var = 1
 loop_var2 = 1
@@ -18,7 +19,7 @@ def cellcount():
 
 keyboard.add_hotkey('g', cellcount)
 
-
+#The downloading will end with the file on the 1150th row of the excel sheet.
 while count < 1150:
     time.sleep(2)
     pyautogui.click(584, 127)
@@ -108,4 +109,5 @@ while count < 1150:
             loop_var3 += 1
     count += 1
     loop_var3 = 1
+
 
